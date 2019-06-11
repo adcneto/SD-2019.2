@@ -13,6 +13,8 @@ the Federal University of ABC (UFABC).
 
 - **04/06/2019** *(Theory)*: Introduction to Distributed Systems.
 - **06/06/2019** *(Theory)*: Architectures of Distributed Systems.
+- **11/06/2019** *(Theory)*: Processes, Threads, Virtualization
+        and Clients.
 
 ## Bibliography
 
