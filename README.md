@@ -15,6 +15,7 @@ the Federal University of ABC (UFABC).
 - **06/06/2019** *(Theory)*: Architectures of Distributed Systems.
 - **11/06/2019** *(Theory)*: Processes, Threads, Virtualization
         and Clients.
+- **13/06/2019** *(Theory)*: Servers and Code Migration.
 
 ## Bibliography
 
