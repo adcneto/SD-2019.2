@@ -16,6 +16,8 @@ the Federal University of ABC (UFABC).
 - **11/06/2019** *(Theory)*: Processes, Threads, Virtualization
         and Clients.
 - **13/06/2019** *(Theory)*: Servers and Code Migration.
+- **18/06/2019** *(Theory)*: Communication Foundations 
+        and Remote Procedure Call.
 
 ## Bibliography
 
