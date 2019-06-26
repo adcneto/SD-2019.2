@@ -18,6 +18,7 @@ the Federal University of ABC (UFABC).
 - **13/06/2019** *(Theory)*: Servers and Code Migration.
 - **18/06/2019** *(Theory)*: Communication Foundations 
         and Remote Procedure Call.
+- **25/06/2019** *(Theory)*: Message-oriented and Multicast Communication.
 
 ## Bibliography
 
