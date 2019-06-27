@@ -1,4 +1,5 @@
 #include <arpa/inet.h>
+#include <ctype.h>
 #include <netinet/in.h>
 #include <signal.h>
 #include <stdio.h>
