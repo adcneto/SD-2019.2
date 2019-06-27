@@ -19,6 +19,9 @@ the Federal University of ABC (UFABC).
 - **18/06/2019** *(Theory)*: Communication Foundations 
         and Remote Procedure Call.
 - **25/06/2019** *(Theory)*: Message-oriented and Multicast Communication.
+- **27/06/2019** *(Laboratory)*: [Processes and sockets].
+
+[Processes and sockets]: laboratory/2019.06.27/
 
 ## Bibliography
 
