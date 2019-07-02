@@ -20,6 +20,7 @@ the Federal University of ABC (UFABC).
         and Remote Procedure Call.
 - **25/06/2019** *(Theory)*: Message-oriented and Multicast Communication.
 - **27/06/2019** *(Laboratory)*: [Processes and sockets].
+- **02/07/2019** *(Theory)*: Flat Naming.
 
 [Processes and sockets]: laboratory/2019.06.27/
 
