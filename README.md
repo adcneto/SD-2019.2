@@ -22,6 +22,8 @@ the Federal University of ABC (UFABC).
 - **27/06/2019** *(Laboratory)*: [Processes and sockets].
 - **02/07/2019** *(Theory)*: Flat Naming.
 - **04/07/2019** *(Theory)*: [RMI and Serialization].
+- **11/07/2019** *(Theory)*: **First test**.
+- **16/07/2019** *(Theory)*: Structured and Attribute-based Naming.
 
 [Processes and sockets]: laboratory/2019.06.27/
 [RMI and Serialization]: laboratory/2019.07.04/
