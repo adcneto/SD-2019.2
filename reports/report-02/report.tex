@@ -1,0 +1,153 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+\documentclass[a4paper, 12pt, answers]{exam}
+
+\usepackage[brazil]{babel}
+\let\latinencoding\relax
+\usepackage[T1]{fontenc}
+
+\usepackage[no-math]{fontspec}
+\usepackage{newpxtext, newpxmath}
+\usepackage[a4paper, margin=2cm]{geometry}
+
+\usepackage{siunitx}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\input{definition.tex}
+
+\title{\titulo}
+\author{\nomeAutorUm e \nomeAutorDois}
+\date{\today}
+
+\sisetup{
+  binary-units = true
+}
+
+\renewcommand{\solutiontitle}{}
+
+\fvset{
+  gobble = 8,
+  frame = single
+}
+
+\newcommand{\printtitle}{
+  \begin{center}
+    {\Large \scshape \titulo}\\[1em]
+    {\nomeAutorUm, \raAutorUm}\\
+    {\nomeAutorDois, \raAutorDois}\\[1em]
+    Professor: Dr\@. \nomeProfessor, \centroProfessor\\
+    {\itshape \campusFaculdade}
+  \end{center}
+}
+
+\begin{document}
+  \printtitle
+  
+  \begin{questions}
+    \question
+    Seguir o tutorial de RMI.
+    
+    \begin{parts}
+      \part
+      Servidor: executar o \verb|rmi.bat| e depois o \verb|server.bat|.
+      
+      \begin{solution}
+        \begin{Verbatim}[label={\$ server.bat}]
+        ComputeEngine bound
+        \end{Verbatim}
+      \end{solution}
+      
+      \part
+      Cliente: executar o \verb|client.bat|. Discorra sobre os tempos obtidos
+      na execução de forma remota e local.
+      
+      \begin{solution}
+      
+        O procedimento utilizando a forma remota de execução do código é 
+        consideravelmente mais lento. Isso implica que o \emph{overhead}
+        gerado pela técnica de RMI assim como uma eventual latência de
+        comunicação afetam de maneira enorme o custo da execução do código
+        na ordem de segundos de diferença em relação a execução local, 
+        ou seja, esta técnica de migração de código é custosa e quando 
+        utilizada implicará em um decaimento significativo na performance 
+        da aplicação, principalmente se a aplicação/código for relativamente
+        simples como o caso do exemplo utilizado. Somando o observado com o
+        fato de que a implementação utilizando RMI não é trivial, fica 
+        demonstrado a dificuldade de implementação de sistemas de migração
+        de código.
+        
+        
+        \begin{Verbatim}[label={\$ client.bat}]
+        *** REMOTE EXECUTION ***
+        Pi: 3.141592653589793238462643383279502884197169399
+        Locate RMI registry: 130 miliseconds.
+        Lookup remote object by name in the registry: 119 miliseconds.
+        Remote execution of the task: 53 miliseconds.
+        Total elapsed time: 302 miliseconds.
+        
+        *** LOCAL EXECUTION ***
+        Pi: 3.141592653589793238462643383279502884197169399
+        Total elapsed time: 1 miliseconds.
+        \end{Verbatim}
+      \end{solution}
+    \end{parts}
+    
+    \question
+    Executar a classe \verb|serialization.SerialObject| com os parâmetros adequados
+    (nome de arquivo e operação).
+    
+    \begin{parts}
+      \part
+      Qual o papel de cada operação (\verb|write|, \verb|read| e \verb|diff|)?
+      
+      \begin{solution}
+        O programa utiliza um \verb|Properties|, que é uma classe que representa
+        um conjunto de propriedades, que implementa \verb|Serializable|, permitindo
+        que possa-se transmitir com o fluxo. Neste caso, obtém-se as propriedades
+        do ambiente de execução do Java. Assim, o \verb|System.getProperties()| é
+        importante para que se conheça as propriedades específicas de um
+        dado sistema operacional.
+        
+        A operação \verb|diff| compara um \verb|Properties| em memória com outro,
+        mostrando suas diferenças. A operação \verb|write| escreve as propriedades
+        em disco. A operação \verb|read| lê as propriedades de um arquivo indicado
+        como argumento de execução, recuperando o estado de execução em disco.
+        
+        \begin{Verbatim}[label={\$ java serialization.SerialObject obj.prop write}]
+        java.runtime.name: Java(TM) SE Runtime Environment
+        sun.boot.library.path: C:\Program Files\Java\jre1.8.0_211\bin
+        java.vm.version: 25.211-b12
+        java.vm.vendor: Oracle Corporation
+        java.vendor.url: http://java.oracle.com/
+        ...
+        \end{Verbatim}
+        
+        \begin{Verbatim}[label={\$ java serialization.SerialObject obj.prop read}]
+        java.runtime.name: Java(TM) SE Runtime Environment
+        sun.boot.library.path: C:\Program Files\Java\jre1.8.0_211\bin
+        java.vm.version: 25.211-b12
+        java.vm.vendor: Oracle Corporation
+        java.vendor.url: http://java.oracle.com/
+        ...
+        \end{Verbatim}
+        
+        \begin{Verbatim}[label={\$ java serialization.SerialObject obj.prop diff}]
+        sun.java.command: serialization.SerialObject obj.prop diff 
+        / serialization.SerialObject obj.prop write
+        \end{Verbatim}
+      \end{solution}
+    \end{parts}
+    
+    \question
+    Implementar um sistema cliente-servidor em que o cliente envia seu objeto
+    Properties a um servidor por meio de \emph{socket}. O servidor compara
+    o objeto enviado com seu próprio \emph{Properties} e devolve o resultado
+    da operação \verb|diff| ao cliente, que é impresso na tela.
+    
+    \begin{solution}
+      Arquivos de código-fonte anexados junto ao relatório no \verb|zip|.
+    \end{solution}
+  \end{questions}
+\end{document}
