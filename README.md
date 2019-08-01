@@ -29,10 +29,12 @@ the Federal University of ABC (UFABC).
         and Election Algorithms.
 - **25/07/2019** *(Laboratory)*: [Introduction to Apache ZooKeeper].
 - **30/07/2019** *(Theory)*: Data-centric Consistency Models.
+- **01/08/2019** *(Laboratory)*: [Synchronization and Coordenation in ZooKeeper].
 
 [Processes and sockets]: laboratory/2019.06.27/
 [RMI and Serialization]: laboratory/2019.07.04/
 [Introduction to Apache Zookeeper]: laboratory/2019.07.25/
+[Synchronization and Coordenation in ZooKeeper]: laboratory/2019.08.01/
 
 ## Bibliography
 
