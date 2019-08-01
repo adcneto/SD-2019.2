@@ -28,6 +28,7 @@ the Federal University of ABC (UFABC).
 - **23/07/2019** *(Theory)*: Mutual Exclusion, Node Positioning
         and Election Algorithms.
 - **25/07/2019** *(Laboratory)*: [Introduction to Apache ZooKeeper].
+- **30/07/2019** *(Theory)*: Data-centric Consistency Models.
 
 [Processes and sockets]: laboratory/2019.06.27/
 [RMI and Serialization]: laboratory/2019.07.04/
