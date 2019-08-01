@@ -27,9 +27,11 @@ the Federal University of ABC (UFABC).
 - **18/07/2019** *(Theory)*: Clock synchronization and Logical clocks.
 - **23/07/2019** *(Theory)*: Mutual Exclusion, Node Positioning
         and Election Algorithms.
+- **25/07/2019** *(Laboratory)*: [Introduction to Apache ZooKeeper].
 
 [Processes and sockets]: laboratory/2019.06.27/
 [RMI and Serialization]: laboratory/2019.07.04/
+[Introduction to Apache Zookeeper]: laboratory/2019.07.25/
 
 ## Bibliography
 
