@@ -25,6 +25,8 @@ the Federal University of ABC (UFABC).
 - **11/07/2019** *(Theory)*: **First test**.
 - **16/07/2019** *(Theory)*: Structured and Attribute-based Naming.
 - **18/07/2019** *(Theory)*: Clock synchronization and Logical clocks.
+- **23/07/2019** *(Theory)*: Mutual Exclusion, Node Positioning
+        and Election Algorithms.
 
 [Processes and sockets]: laboratory/2019.06.27/
 [RMI and Serialization]: laboratory/2019.07.04/
